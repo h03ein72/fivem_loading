@@ -1,0 +1,235 @@
+@font-face {
+    font-family: Tanha;
+    src: url('fonts/tanha.eot');
+    src: url('fonts/tanha.eot?#iefix') format('embedded-opentype'), url('fonts/tanha.woff') format('woff'), url('fonts/tanha.ttf') format('truetype');
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.Shape #logo {
+    width: 240px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    direction: rtl;
+    animation-name: logo_scale;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+@keyframes logo_scale {
+    0% {
+        transform: scale(0.99, 0.99);
+    }
+    10% {
+        transform: scale(0.98, 0.98);
+    }
+    20% {
+        transform: scale(0.97, 0.97);
+    }
+    30% {
+        transform: scale(0.96, 0.96);
+    }
+    40% {
+        transform: scale(0.95, 0.95);
+    }
+    50% {
+        transform: scale(0.94, 0.94);
+    }
+    60% {
+        transform: scale(0.95, 0.95);
+    }
+    70% {
+        transform: scale(0.96, 0.96);
+    }
+    80% {
+        transform: scale(0.97, 0.97);
+    }
+    90% {
+        transform: scale(0.98, 0.98);
+    }
+    100% {
+        transform: scale(0.99, 0.99);
+    }
+}
+
+#developed {
+    width: 180px;
+    height: 15px;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 50px;
+}
+
+.Shape {
+    background: rgb(76, 10, 150);
+    background: linear-gradient(90deg, rgba(76, 10, 150, 1) 0%, rgba(134, 0, 251, 1) 35%, rgba(174, 33, 255, 1) 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    position: fixed;
+    background-size: 400% 400%;
+    height: 100%;
+    width: 100%;
+    -webkit-animation: Gradient 9s ease infinite;
+    -moz-animation: Gradient 9s ease infinite;
+    animation: Gradient 9s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+#container {
+    width: 500px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.text-slider {
+    width: 450px;
+    height: auto;
+    font-size: 12pt;
+    font-weight: 100;
+    margin: 25px auto;
+    font-family: "tanha", "Baloo Bhaina 2";
+    direction: rtl;
+    text-align: center;
+}
+
+.ShapeStyle {
+    background-color: #20232d;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    filter: opacity(55%);
+    z-index: -1;
+}
+
+.loadbar {
+    width: 220px;
+    background-color: rgba(238, 238, 238, .4);
+    height: 10px;
+    border-radius: 25px;
+    margin: 30px auto;
+    overflow: hidden;
+    position: relative;
+    display: block;
+}
+
+.thingy {
+    width: 10%;
+    background: linear-gradient(90deg, rgba(10, 55, 150, 1) 0%, rgba(0, 123, 251, 1) 35%, rgba(33, 157, 255, 1) 100%);
+    height: 10px;
+    position: absolute;
+    left: 10%;
+}
+
+@keyframes blink {
+    0% {
+        opacity: .2;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .2;
+    }
+}
+
+@keyframes new_blink {
+    0% {
+        opacity: .2;
+    }
+    20% {
+        opacity: .6;
+    }
+    100% {
+        opacity: .2;
+    }
+}
+
+.loading span {
+    animation-name: blink;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+.loading span:nth-child(2) {
+    animation-delay: .2s;
+}
+
+.loading span:nth-child(3) {
+    animation-delay: .4s;
+}
+
+#stop-text {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    direction: rtl;
+    text-align: center;
+    height: auto;
+    font-family: "Tanha";
+    background: #f1f1f1;
+    opacity: 0.6;
+    /* border-top: 5px solid rgb(50, 15, 140); */
+    border-radius: 6px;
+    color: rgb(76, 10, 150);
+    padding: 8px;
+    animation-name: new_blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
