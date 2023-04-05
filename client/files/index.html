@@ -1,0 +1,48 @@
+<html>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+
+<body>
+    <div class="Shape">
+
+        <div class="ShapeStyle" div id="particles-js"></div>
+
+        <div id="container">
+
+            <img src="logo.png" id="logo" draggable="false" />
+
+            <div class="text-slider">
+                <h4 class="slides">به سرور <span style="font-size:14pt">Arena RolePlay</span> خوش آمدید</h4>
+                <h4 class="slides">جهت باز کردن اطلاعات شخصی F9 را فشار دهید</h4>
+                <h4 class="slides">از ارسال ریپورت بدون دلیل خودداری فرمایید</h4>
+                <h4 class="slides"> جهت دریافت گنگ از طریق دیسکورد تیکت ارسال نمایید</h4>
+                <h4 class="slides">از فرستادن ریپورت خلاصه شده پرهیز بفرمایید</h4>
+            </div>
+
+        </div>
+
+        <div id="stop-text">جهت <span id="stop-text-change">بستن</span> صدا دکمه Space را فشار دهید</div>
+    </div>
+
+
+    <img src="developed.png" id="developed" draggable="false" />
+
+    <audio id='muzica' style="visibility: hidden;" volume='0.3' autoplay loop controls>
+        <source src="music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+    <script type="text/javascript">
+        var audio = document.getElementById("muzica");
+        audio.volume = 0.3;
+    </script>
+
+</body>
+
+<script src="particles.js"></script>
+<script src="text-slider.js"></script>
+<script src="app.js"></script>
+
+</html>
